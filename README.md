@@ -1,25 +1,25 @@
 #   IPLogger Discord Webhook
-Simple IPLogger el cual funciona con un archivo HTML y Webhook de Discord.
+Simple IPLogger which works with HTML file and Discord Webhook.
 
-#   Instalación y cambios al codigo
-• Clonar el respositorio o descargar el archivo index.html.
-• Crear el webhook en Discord.
-• Abrir el archivo index.html con tu editor de codigo preferido.
-• Dirigirse a la linea 155 del codigo para modificar la Url del webhook.
+#   Installation and code changes
+- Clone the repository or download the index.html file.
+- Create the webhook on Discord.
+- Open the index.html file with your preferred code editor.
+- Go to line 155 of the code to modify the URL of the webhook.
 
-#   Despliegue
-• Utilizar un host web gratis o de paga.
-• Subir el archivo index.html a la carpeta raiz del host.
+#   Deployment
+- Use a free or paid web host.
+- Upload the index.html file to the root folder of the host.
 
-Host gratis en el que puedes subir el IpLogger
+Free host where you can upload the IpLogger
 https://www.000webhost.com
 
-#   Imagenes
-Modificar URL de webhook
-https://i.postimg.cc/d3Sb1Bs4/code.png
+#   Images
+Modify webhook URL
+[![code.png](https://i.postimg.cc/d3Sb1Bs4/code.png)](https://postimg.cc/7J0stST2)
 
-Datos de llegada del webhook
-https://i.postimg.cc/VvvL69mS/Screenshot-2.png
+Webhook arrival data
+[![Screenshot-2.png](https://i.postimg.cc/jdcXz5yY/Screenshot-2.png)](https://postimg.cc/vc1fyGP0)
 
-Página inicial
-https://i.postimg.cc/J4tG48zT/Screenshot-1.png
+Main page
+[![Screenshot-1.png](https://i.postimg.cc/44zwxwdd/Screenshot-1.png)](https://postimg.cc/pyLK0fKb)
