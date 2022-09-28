@@ -5,7 +5,7 @@ Simple IPLogger which works with HTML file and Discord Webhook.
 - Clone the repository or download the index.html file.
 - Create the webhook on Discord.
 - Open the index.html file with your preferred code editor.
-- Go to line 155 of the code to modify the URL of the webhook.
+- Go to line 163 of the code to modify the URL of the webhook.
 
 #   Deployment
 - Use a free or paid web host.
